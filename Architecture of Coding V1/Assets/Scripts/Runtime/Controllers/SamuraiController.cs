@@ -8,21 +8,15 @@ public class SamuraiController : MonoBehaviour
     
     [SerializeField] private float moveSpeed;
     private float _horizontalInput;
+    [SerializeField] private Animator samuraiAnimator;
 
     private void Awake()
     {
-        _samurai = new Samurai(moveSpeed,this.gameObject);
         _characterInput = new CharacterInput();
+        //_samurai = new Samurai(moveSpeed,this.gameObject,samuraiAnimator,_characterInput);
     }
 
-    private void Update()
-    {
-        SamuraiWalk();
-    }
+    
 
-    private void SamuraiWalk()
-    {
-        _horizontalInput = _characterInput.WalkInput();
-        _samurai.Walk(_horizontalInput);
-    }
+    
 }
