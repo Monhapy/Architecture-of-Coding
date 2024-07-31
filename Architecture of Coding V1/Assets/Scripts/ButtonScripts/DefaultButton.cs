@@ -2,7 +2,7 @@
 
 public class DefaultButton : InteractButtons
 {
-    [SerializeField] private bool isActing;
+   // [SerializeField] private bool isActing;
     
     public override void PerformAction()
     {
@@ -12,14 +12,14 @@ public class DefaultButton : InteractButtons
     private void ActionStart()
     {
         Debug.Log("AnimationPlaying");
-        isActing = true;
+        //isActing = true;
         gameObject.SetActive(false);
     }
 
     private void ActionEnd()
     {
         Debug.Log("AnimationEnd");
-        isActing = false;
+        //isActing = false;
         gameObject.SetActive(true);
     }
     
